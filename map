@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+ 
+<html>
+ 
+<head>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+ 
+<style type="text/css">
+ 
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+#up-map-div{
+width:300px;
+height:150px;
+top:300px;
+left:865px;
+position:absolute;
+z-index:9999;
+border:1px solid blue;
+
+background-color:#FFFFFF;
+}
+#up-map-div2{
+width:280px;
+height:25px;
+top:480px;
+left:875px;
+position:absolute;
+z-index:9999;
+border:0px solid red;
+opacity: 0.4;
+background-color:#FFFFFF;
+}
+
+
+</style>
+ 
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=RT57Vz1BUwLr4hYIZIftnslxdph37LGv"></script>
+ 
+<title>周俊逸 家乡地图</title>
+ 
+</head>
+ 
+<body>
+
+
+<div id="allmap"></div>
+<div id="up-map-div">
+<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fphoto.tuchong.com%2F3712573%2Ff%2F892084673.jpg&refer=http%3A%2F%2Fphoto.tuchong.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650074189&t=6102a1856e04259058bc26a7813c17a4"width="300" height="150">
+</div>
+
+ <div id="up-map-div2">
+<a href="https://baike.baidu.com/item/%E8%A5%BF%E6%B9%96/4668821?fr=aladdin" alt="西湖介绍">
+单击获取西湖介绍
+</a>
+</div>
+</body>
+ 
+</html>
+ 
+<script type="text/javascript">
+ 
+// 百度地图API功能
+ 
+var map = new BMap.Map("allmap");    // 创建Map实例
+ 
+map.centerAndZoom(new BMap.Point(120.108478,30.220671),18);  // 初始化地图,设置中心点坐标和地图级别
+ 
+map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+ 
+map.setCurrentCity("杭州");          // 设置地图显示的城市 此项是必须设置的
+ 
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+ 
+</script>
